@@ -1,0 +1,656 @@
+/*    dP   dP                                                                  dP        */
+/*    88   88                                                                  88        */
+/*  d8888P 88d888b. .d8888b. 88d8b.d8b. .d8888b.    88d888b. .d8888b. 88d888b. 88  .dP   */
+/*    88   88'  `88 88ooood8 88'`88'`88 88ooood8    88'  `88 88'  `88 88'  `88 88888"    */
+/*    88   88    88 88.  ... 88  88  88 88.  ...    88.  .88 88.  .88 88       88  `8b.  */
+/*    dP   dP    dP `88888P' dP  dP  dP `88888P' 88 88Y888P' `88888P8 dP       dP   `YP  */
+/*                                                  88                                   */
+/*                                                  dP					 */
+
+/*		   		        Made by @gilbN					 */
+/*			      https://github.com/gilbN/theme.park			 */
+
+@import url("/css/defaults/placeholders.css");
+@import url("/css/defaults/transparent.css");
+
+* {
+    outline: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-hover);
+}
+
+body,
+.logged-out-modal guac-modal {
+    background: var(--main-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text) !important;
+}
+
+div.displayMiddle {
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+
+/* LOGIN MENU */
+div.login-ui {
+    background: inherit;
+}
+
+.login-ui div.login-dialog {
+    background: var(--transparency-dark-25);
+    border: none;
+}
+
+
+input[type="submit"],
+button,
+a.button {
+    background-color: var(--button-color);
+    border: none;
+    outline: none;
+}
+
+input[type="submit"]:hover,
+button:hover,
+a.button:hover {
+    background-color: var(--button-color-hover);
+    border: none;
+    cursor: pointer;
+}
+select {
+    background: var(--transparency-dark-10);
+    color: var(--text);
+    border-color: transparent;
+}
+select:focus {
+    background-color: var(--drop-down-menu-bg);
+    color: var(--text);
+}
+
+.login-ui .login-fields .labeled-field input:focus {
+    outline: none;
+}
+
+.login-ui .login-fields .labeled-field.empty input {
+    outline: none;
+    background: rgba(0, 0, 0, 0.15);
+    caret-color: var(--text);
+}
+
+.login-ui .login-fields .labeled-field.empty input:focus {
+    outline: none;
+    color: black;
+}
+
+.login-ui .login-dialog .login-fields input {
+    background: white;
+    color: black !important;
+}
+
+div.location,
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+textarea {
+    color: var(--text-hover);
+}
+
+input[type=checkbox],
+input[type=number],
+input[type=text],
+input[type=email],
+input[type=radio],
+textarea {
+    color: var(--text-hover);
+}
+
+.login-ui .login-dialog .login-fields input {
+    background: white;
+    color: black !important;
+}
+
+/* HOME MENU */
+.header h2 {
+    color: rgb(var(--accent-color));
+}
+
+.connection .icon.vnc,
+.connection .icon.rdp {
+    background-image: url(/resources/guacamole/guac-monitor.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.connection .icon.ssh,
+.connection .icon.telnet {
+    background-image: url(/resources/guacamole/guac-text.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.user-menu .menu-dropdown .menu-title {
+    background-image: url(/resources/guacamole/guac-user.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.user-menu .menu-dropdown .menu-contents li a[href="#/"] {
+    background-image: url(/resources/guacamole/guac-home-dark.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.user-menu .menu-dropdown .menu-contents li a[href="#/settings/users"],
+.user-menu .menu-dropdown .menu-contents li a[href="#/settings/connections"],
+.user-menu .menu-dropdown .menu-contents li a[href="#/settings/sessions"],
+.user-menu .menu-dropdown .menu-contents li a[href="#/settings/preferences"] {
+    background-image: url(/resources/guacamole/guac-config-dark.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.user-menu .menu-dropdown .menu-contents li a.logout {
+    background-image: url(/resources/guacamole/guac-logout-dark.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.icon.user {
+    background-image: url(/resources/guacamole/guac-user.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.pager .icon.first-page {
+    background-image: url(/resources/guacamole/guac-first-page.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.pager .icon.prev-page {
+    background-image: url(/resources/guacamole/guac-prev-page.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.pager .icon.next-page {
+    background-image: url(/resources/guacamole/guac-next-page.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.pager .icon.last-page {
+    background-image: url(/resources/guacamole/guac-last-page.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.loading::before {
+    background-image: url(/resources/guacamole/cog.png);
+}
+
+table.sorted th.sort-primary.sort-descending:after {
+    background-image: url(/resources/guacamole/up.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.menu-dropdown .menu-indicator {
+    background-image: url(/resources/guacamole/down.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.menu-dropdown .menu-indicator:hover {
+    background-image: url(/resources/guacamole/down.png);
+    color: #f9be03;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+table.sorted th.sort-primary:after {
+    background-image: url(/resources/guacamole/down.png);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: 0.75em;
+    padding-left: 2.5em;
+}
+
+.form-field .password-field input[type=password]~.icon.toggle-password {
+    filter: invert(1);
+}
+
+thead {
+    color: var(--text-hover);
+}
+
+table.sorted th,
+table.sorted td {
+    border: 1px solid rgb(255 255 255 / 15%);
+}
+
+.settings table.session-list tr.session:hover {
+    background: var(--transparency-light-15);
+}
+
+.menu-dropdown.open,
+.menu-dropdown.open:hover {
+    background: var(--transparency-dark-25)
+}
+
+.menu-dropdown .menu-contents li a {
+    display: block;
+    cursor: pointer;
+    color: var(--text);
+    text-decoration: none;
+    padding: .75em;
+}
+
+.menu-dropdown .menu-contents li a.current,
+.menu-dropdown .menu-contents li a.current:hover {
+    color: var(--text-hover)
+}
+
+.menu-dropdown .menu-contents li a:hover {
+    background: var(--transparency-dark-25);
+    color: var(--text-hover);
+}
+
+.menu-dropdown:hover {
+    background: var(--transparency-dark-25);
+    color: var(--text-hover);
+}
+
+.menu-dropdown .menu-contents {
+    background: var(--drop-down-menu-bg);
+
+}
+
+.header .filter input {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -khtml-border-radius: 0;
+    border-radius: 0;
+    border: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: transparent;
+    color: var(--text-hover);
+}
+
+
+.filter .search-string {
+    background-image: url(/resources/guacamole/magnifier.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 1.75em !important;
+    background-position: .25em center !important;
+    padding: .5em !important;
+    padding-left: 2.25em !important;
+    width: 100%;
+    max-width: none;
+    background: var(--transparency-dark-25);
+    border: 0;
+}
+
+div.location,
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+textarea {
+    color: var(--text-hover);
+}
+
+
+.user a:visited,
+.user-group a:visited,
+.connection a:visited,
+.connection-group a:visited {
+    text-decoration: none;
+    color: var(--link-color-hover);
+}
+
+.recent-connections .connection:hover {
+    background: var(--transparency-dark-10);
+    color: var(--link-color-hover);
+}
+
+.list-item:not(.selected) .caption:hover {
+    background: var(--transparency-dark-10);
+    color: var(--link-color-hover);
+}
+
+.list-item .name {
+    color: var(--link-color);
+}
+
+.list-item:not(.selected) .caption:hover .name {
+    color: var(--link-color-hover);
+}
+
+/* SIDE MENU */
+.menu,
+.menu .header {
+    background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    box-shadow: none;
+}
+
+.menu-content,
+.menu-content .header,
+.menu-body {
+    background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+.clipboard,
+.clipboard-service-target {
+    background: var(--transparency-dark-25);
+    color: var(--text-hover);
+}
+
+/* NOTIFICATION BOX */
+.notification.error {
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text-hover);
+}
+
+.notification {
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text-hover);
+}
+
+/* SETTINGS */
+.page-tabs .page-list li a[href]:visited {
+    color: var(--text-hover);
+}
+
+.page-tabs .page-list li a[href] {
+    color: var(--text-hover);
+}
+
+.page-tabs .page-list li a[href]:hover {
+    background: var(--transparency-dark-25);
+}
+
+.user a:visited,
+.user-group a:visited,
+.connection a:visited,
+.connection-group a:visited {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.user a:hover,
+.user-group a:hover,
+.connection a:hover,
+.connection-group a:hover,
+a.ng-binding:hover:not(.add-user):not(.button) {
+    color: var(--link-color-hover) !important;
+}
+
+.user a,
+.user-group a,
+.connection a,
+.connection-group a,
+a.ng-binding:not(.add-user):not(.button) {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+div.location,
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+textarea {
+    border: 0;
+    background: var(--transparency-dark-25)
+}
+
+.location-chooser .dropdown {
+    background: #666;
+}
+
+img.collapse {
+    filter: invert(1);
+}
+
+img.expand {
+    filter: invert(1);
+}
+
+.icon.user-group {
+    filter: invert(1);
+}
+
+/* USER SETTINGS */
+.page-tabs .page-list li a[href],
+.section-tabs li a {
+    color: var(--text) !important;
+}
+
+.page-tabs .page-list li a[href].current,
+.page-tabs .page-list li a[href].current:hover,
+.section-tabs li a.current,
+.section-tabs li a.current:hover {
+    background: var(--transparency-dark-25);
+    cursor: default;
+    color: rgb(var(--accent-color)) !important;
+}
+
+.page-tabs .page-list li a[href]:hover,
+.section-tabs li a:hover {
+    background: var(--transparency-dark-10);
+    color: var(--text-hover) !important;
+}
+
+.manage-user .page-tabs .page-list li.linked a[href]:before {
+    background-image: url(/resources/guacamole/checkmark.png);
+}
+
+.manage-user .page-tabs .page-list li.read-only a[href]:before {
+    background-image: url(/resources/guacamole/lock.png);
+}
+
+.manage-user .notice.read-only {
+    background: var(--transparency-dark-10);
+}
+
+/* DUA 2FA PAGE */
+.duo-signature-response-field {
+    background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+.base-wrapper {
+    border: 1px solid transparent !important;
+    background: var(--modal-bg-color) !important;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+.base-body {
+    background-color: #333 !important;
+}
+
+h1.spacious-frame-view {
+    color: var(--text-hover) !important;
+}
+
+@media screen and (-webkit-max-device-pixel-ratio: 1.25),
+screen and (max-resolution: 120dpi) {
+
+    h1,
+    .h1 {
+        color: var(--text-hover) !important;
+    }
+}
+
+.white-wrapper {
+    background-color: #333 !important;
+    color: var(--text) !important;
+}
+
+form:not(.inline) fieldset {
+    background-color: #333 !important;
+}
+
+label span {
+    color: var(--text-hover) !important;
+}
+
+input[type=radio] {
+    border: 1px solid var(--text-hover) !important;
+}
+
+/* Connection */
+
+#connection-warning {
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    color: var(--text);
+}
+
+/* File Transfer */
+#file-transfer-dialog .transfer-manager {
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+.transfer.error {
+    background: rgba(244, 67, 54, 0.5);
+}
+
+.transfer-manager .header h2 {
+    background-color: transparent;
+}
+
+.transfer .in-progress .progress {
+    background: var(--modal-bg-color);
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-position: center center, center center;
+    background-size: auto, cover;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+}
+
+.related-objects .abbreviated-related-objects ul li {
+    display: inline-block;
+    margin: .25em;
+    padding: .25em;
+    border: 1px solid rgb(var(--accent-color));
+    background: rgb(var(--accent-color));
+}
+
+.related-objects .abbreviated-related-objects ul li label span {
+    color: var(--label-text-color) !important;
+}
+
+.attributes .form h3, .header {
+    background: var(--transparency-dark-25)
+}
+
+.connection-parameters .form .fields {
+    border-left: 3px solid rgb(var(--accent-color));
+}
